@@ -10,7 +10,6 @@ A node.js motion detection library written in JavaScript.
 npm install motion
 ```  
   
--------------
   
 ## Usage
 
@@ -20,7 +19,6 @@ var motion = new Motion();
 var hasMotion = motion.detect(image1, image2);
 ```
   
--------------
   
 ## Methods
   
@@ -76,7 +74,6 @@ console.log(img2 === motion.getLastImage());
   
 Returns an image with detected motion as white pixels on a black background in the form of a flat array of RGBA numbers.
   
-----------------------
   
 ## About
 
