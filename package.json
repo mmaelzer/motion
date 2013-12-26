@@ -1,0 +1,27 @@
+{
+  "name": "motion",
+  "version": "0.1.0",
+  "description": "A node.js motion detection library written in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmaelzer/motion"
+  },
+  "keywords": [
+    "motion",
+    "motion",
+    "detection",
+    "vision",
+    "computer",
+    "vision"
+  ],
+  "author": "Mike Maelzer <mmaelzer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmaelzer/motion/issues"
+  },
+  "homepage": "https://github.com/mmaelzer/motion"
+}
