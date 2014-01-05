@@ -1,6 +1,6 @@
 {
   "name": "motion",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A node.js motion detection library written in JavaScript",
   "main": "index.js",
   "scripts": {
@@ -16,12 +16,23 @@
     "detection",
     "vision",
     "computer",
-    "vision"
+    "vision",
+    "stream",
+    "streams"
   ],
   "author": "Mike Maelzer <mmaelzer@gmail.com>",
-  "license": "MIT",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/mmaelzer/motion/issues"
   },
-  "homepage": "https://github.com/mmaelzer/motion"
+  "homepage": "https://github.com/mmaelzer/motion",
+  "dependencies": {
+    "ttq": "~0.1.1",
+    "im-decode": "~0.1.0"
+  },
+  "devDependencies": {
+    "request": "~2.30.0",
+    "mjpeg-consumer": "~0.3.1",
+    "file-on-write": "~0.2.0"
+  }
 }
