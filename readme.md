@@ -14,7 +14,7 @@ npm install motion
 ## Usage
 
 ```javascript
-var Motion = require('motion');
+var Motion = require('motion').Motion;
 var motion = new Motion();
 var hasMotion = motion.detect(image1, image2);
 ```
@@ -29,7 +29,7 @@ var hasMotion = motion.detect(image1, image2);
 Detect is called with one or two flat arrays of RGBA values. If called with one parameter, detect will use the last `image1` as `image2`.
   
 ```javascript
-var Motion = require('motion');
+var Motion = require('motion').Motion;
 var motion = new Motion();
   
 // img1, img2, img3, img4 created ... 
