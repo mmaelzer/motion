@@ -13,7 +13,7 @@ npm install motion
 ```
 
 
-Streams
+Motion Stream
 ------------
 
 ### Usage
@@ -27,9 +27,9 @@ mjpegconsumer.pipe(motion).pipe(filewriter);
 ```
   
 ### Stream Options
-* `minimumMotion`: Number : The minimum number of seconds of motion required before emitting data
-* `prebuffer`: Number : The motion stream will emit the prebuffer number of seconds of images prior to motion occurring with motion data.
-* `postbuffer`: Number: The motion stream will emit the postbuffer number of seconds of images after motion occurs.
+* **minimumMotion**: Number : default `2` : The minimum number of seconds of motion required before emitting data
+* **prebuffer**: Number : default `4` : The motion stream will emit the prebuffer number of seconds of images prior to motion occurring with motion data.
+* **postbuffer**: Number : default `4` : The motion stream will emit the postbuffer number of seconds of images after motion occurs.
   
   
 Motion Object
