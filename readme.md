@@ -15,22 +15,48 @@ npm install motion
 
 Motion Stream
 ------------
+Write images of any format to a motion stream, and the motion stream will emit, if motion is detected, objects of the format `{ time: 1394600350750, data: <Buffer ...> }` where `time` is the moment the motion stream received the frame.
 
 ### Usage
 
 ```javascript
-var MotionStream = require('motion').Stream;
+var request = require("request");
+var MjpegConsumer = require("mjpeg-consumer");
+var MotionStream = require("motion").Stream;
+var FileOnWrite = require("file-on-write");
+
+var writer = new FileOnWrite({ 
+  path: './video',
+  ext: '.jpg',
+  filename: function(image) {
+    return image.time;
+  },
+  transform: function(image) {
+    return image.data;
+  },
+  sync: true
+});
+
+var consumer = new MjpegConsumer();
 var motion = new MotionStream();
 
-mjpegconsumer.pipe(motion).pipe(filewriter);
+var username = "admin";
+var password = "password";
+var options = {
+  url: "http://192.168.1.5/videostream.cgi",
+  headers: {
+    'Authorization': 'Basic ' + new Buffer(username + ':' + password).toString('base64')
+  }  
+};
 
+request(options).pipe(consumer).pipe(motion).pipe(writer);
 ```
   
 ### Stream Options
 * **minimumMotion**: Number : default `2` : The minimum number of seconds of motion required before emitting data
 * **prebuffer**: Number : default `4` : The motion stream will cache and emit the prebuffer number of seconds of images prior to motion occurring.
 * **postbuffer**: Number : default `4` : The motion stream will emit the postbuffer number of seconds of images after motion occurs.
-  
+
   
 Motion Object
 -------------
