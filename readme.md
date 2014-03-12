@@ -1,17 +1,41 @@
 Motion
 ======
   
-A node.js motion detection library written in JavaScript.
+A node.js motion detection library written in JavaScript that supports node.js streams.  
   
+Using `motion` streams requires [ImageMagick](http://www.imagemagick.org) CLI tools to be installed. There's plenty of ways to install ImageMagick, choose what's right for you.
   
-## Install
+Install
+------------
 
 ```
 npm install motion
-```  
+```
+
+
+Streams
+------------
+
+### Usage
+
+```javascript
+var MotionStream = require('motion').Stream;
+var motion = new MotionStream();
+
+mjpegconsumer.pipe(motion).pipe(filewriter);
+
+```
+  
+### Stream Options
+* `minimumMotion`: Number : The minimum number of seconds of motion required before emitting data
+* `prebuffer`: Number : The motion stream will emit the prebuffer number of seconds of images prior to motion occurring with motion data.
+* `postbuffer`: Number: The motion stream will emit the postbuffer number of seconds of images after motion occurs.
   
   
-## Usage
+Motion Object
+-------------
+
+### Usage
 
 ```javascript
 var Motion = require('motion').Motion;
@@ -20,9 +44,9 @@ var hasMotion = motion.detect(image1, image2);
 ```
   
   
-## Methods
+### Methods
   
-### detect(image1, [image2])
+#### detect(image1, [image2])
 * image1 `Array` of `Number`
 * image2 (optional): `Array` of `Number`
   
@@ -52,7 +76,7 @@ console.log(hasMotion);
 ```
   
   
-### getLastImage()
+#### getLastImage()
 Returns the last image.
   
 ```javascript
@@ -68,13 +92,13 @@ console.log(img2 === motion.getLastImage());
 ```
   
   
-### getBlendedImage(image1, image2)
+#### getBlendedImage(image1, image2)
 * image1 `Array` of `Number`
 * image2 `Array` of `Number`
   
 Returns an image with detected motion as white pixels on a black background in the form of a flat array of RGBA numbers.
   
   
-## About
-
+About
+-----------
 Inspiration for this library comes from [Romuald Quantin's excellent write up](http://www.adobe.com/devnet/html5/articles/javascript-motion-detection.html) on motion detection in Javascript.

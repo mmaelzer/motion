@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Motion = require('../index');
+var Motion = require('../index').Motion;
 
 var IMG1 = [128,128,128,255,128,128,128,255,64,64,64,255,255,255,255,255];
 var IMG2 = [96,96,96,255,128,128,128,255,64,64,64,255,255,255,255,255];

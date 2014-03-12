@@ -1,7 +1,7 @@
 {
   "name": "motion",
-  "version": "0.2.1",
-  "description": "A node.js motion detection library written in JavaScript",
+  "version": "0.2.2",
+  "description": "A node.js motion detection library that supports node.js streams",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
