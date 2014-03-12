@@ -1,9 +1,9 @@
 Motion
 ======
   
-A node.js motion detection library written in JavaScript that supports node.js streams.  
+A node.js motion detection library that supports node.js streams.  
   
-Using `motion` streams requires [ImageMagick](http://www.imagemagick.org) CLI tools to be installed. There's plenty of ways to install ImageMagick, choose what's right for you.
+Using motion streams requires [ImageMagick](http://www.imagemagick.org) CLI tools to be installed. There's plenty of ways to install ImageMagick, choose what's right for you.
   
 Install
 ------------
