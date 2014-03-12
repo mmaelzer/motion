@@ -28,7 +28,7 @@ mjpegconsumer.pipe(motion).pipe(filewriter);
   
 ### Stream Options
 * **minimumMotion**: Number : default `2` : The minimum number of seconds of motion required before emitting data
-* **prebuffer**: Number : default `4` : The motion stream will emit the prebuffer number of seconds of images prior to motion occurring with motion data.
+* **prebuffer**: Number : default `4` : The motion stream will cache and emit the prebuffer number of seconds of images prior to motion occurring.
 * **postbuffer**: Number : default `4` : The motion stream will emit the postbuffer number of seconds of images after motion occurs.
   
   
