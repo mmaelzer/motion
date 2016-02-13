@@ -1,5 +1,5 @@
 {
-  "name": "motion",
+  "name": "motion-detect",
   "version": "0.2.2",
   "description": "A node.js motion detection library that supports node.js streams",
   "main": "index.js",
@@ -21,14 +21,15 @@
     "streams"
   ],
   "author": "Mike Maelzer <mmaelzer@gmail.com>",
-  "license": "BSD",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mmaelzer/motion/issues"
   },
   "homepage": "https://github.com/mmaelzer/motion",
   "dependencies": {
-    "ttq": "~0.1.1",
-    "im-decode": "~0.1.0"
+    "im-decode": "~0.1.0",
+    "inkjet": "^1.2.0",
+    "ttq": "~0.1.1"
   },
   "devDependencies": {
     "request": "~2.30.0",

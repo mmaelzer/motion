@@ -18,13 +18,8 @@ var writer = new FileOnWrite({
 var consumer = new MjpegConsumer();
 var motion = new MotionStream();
 
-var username = "admin";
-var password = "password";
 var options = {
-  url: "http://192.168.1.5/videostream.cgi",
-  headers: {
-    'Authorization': 'Basic ' + new Buffer(username + ':' + password).toString('base64')
-  }  
+  url: 'http://rax1.bsn.net/mjpg/video.mjpg?streamprofile=Balanced'
 };
 
 request(options).pipe(consumer).pipe(motion).pipe(writer);

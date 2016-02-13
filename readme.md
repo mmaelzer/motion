@@ -9,7 +9,7 @@ Install
 ------------
 
 ```
-npm install motion
+npm install motion-detect
 ```
 
 
@@ -22,7 +22,7 @@ Write images of any format to a motion stream, and the motion stream will emit, 
 ```javascript
 var request = require("request");
 var MjpegConsumer = require("mjpeg-consumer");
-var MotionStream = require("motion").Stream;
+var MotionStream = require("motion-detect").Stream;
 var FileOnWrite = require("file-on-write");
 
 var writer = new FileOnWrite({ 
@@ -64,7 +64,7 @@ Motion Object
 ### Usage
 
 ```javascript
-var Motion = require('motion').Motion;
+var Motion = require('motion-detect').Motion;
 var motion = new Motion();
 var hasMotion = motion.detect(image1, image2);
 ```
@@ -79,7 +79,7 @@ var hasMotion = motion.detect(image1, image2);
 Detect is called with one or two flat arrays of RGBA values. If called with one parameter, detect will use the last `image1` as `image2`.
   
 ```javascript
-var Motion = require('motion').Motion;
+var Motion = require('motion-detect').Motion;
 var motion = new Motion();
   
 // img1, img2, img3, img4 created ... 
