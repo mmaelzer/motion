@@ -1,6 +1,6 @@
 {
   "name": "motion-detect",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A node.js motion detection library that supports node.js streams",
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "request": "~2.30.0",
-    "mjpeg-consumer": "~0.3.1",
-    "file-on-write": "~0.2.0"
+    "mjpeg-consumer": "~1.1.0",
+    "file-on-write": "~1.1.1"
   }
 }
