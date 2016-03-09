@@ -1,6 +1,6 @@
 {
   "name": "motion-detect",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A node.js motion detection library that supports node.js streams",
   "main": "index.js",
   "scripts": {
